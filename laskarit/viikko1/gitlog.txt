@@ -1,0 +1,114 @@
+commit 80e6f1c431d3b11271b5d04472c8dee772e3169a
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 13:49:03 2019 +0200
+
+    commit
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e734704a05b53772175391fe187bddf089becb38
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 13:32:44 2019 +0200
+
+    tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 78f77fd57e002f5f0df81e0b57617434a115b1ee
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 13:17:40 2019 +0200
+
+    kommitti
+
+ eka.txt    | 4 ++--
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit aeaa769efc93c65b172f5f83364b56570f4012cf
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 13:11:47 2019 +0200
+
+    uudelleennimentä
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f728df981bf3194fe15a434c96ec29c52dd2eebd
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 13:09:39 2019 +0200
+
+    toinen pois
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 70b2ba5017562bfb3b6ab27a95269b54e9f76cf4
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 13:05:23 2019 +0200
+
+    edelleen muutellaan
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6478cb21721fc9f3a217878c98bda83d23d5cd5c
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 13:02:13 2019 +0200
+
+    hai tietoja uudestaan
+
+ tiedosto.txt | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+commit 33738836d4f0f0baeadbb57cc55a07613b567810
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 12:50:01 2019 +0200
+
+    ja lisää muutoksia
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6c1ee02e45c2575d999d169175c6c9ce9db07ae5
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 12:47:45 2019 +0200
+
+    uusia muutoksia
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 64a296d93cd45a7d74a653529c91683c637ad254
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 12:43:06 2019 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f7421c8d982588de909409dd685f93ac1f0b3d7d
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 12:33:58 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 579d11d9e19b0f6cf3fed2537d35299df79174f2
+Author: Antti Mäkelä <antti.makela@helsinki.fi>
+Date:   Mon Nov 4 12:26:38 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
