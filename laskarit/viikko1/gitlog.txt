@@ -37,7 +37,7 @@ Date:   Mon Nov 4 13:11:47 2019 +0200
 
  tiedosto.txt => eka.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
-
+(muutos)
 commit f728df981bf3194fe15a434c96ec29c52dd2eebd
 Author: Antti Mäkelä <antti.makela@helsinki.fi>
 Date:   Mon Nov 4 13:09:39 2019 +0200
