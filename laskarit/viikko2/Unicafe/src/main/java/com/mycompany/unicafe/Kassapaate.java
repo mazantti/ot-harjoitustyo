@@ -9,6 +9,8 @@ public class Kassapaate {
 
     public Kassapaate() {
         this.kassassaRahaa = 100000;
+        this.edulliset = 0;
+        this.maukkaat=0;
     }
 
     public int syoEdullisesti(int maksu) {
