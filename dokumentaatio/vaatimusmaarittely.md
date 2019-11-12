@@ -4,6 +4,8 @@ Laivanupotus on kahden pelaajan vuoropohjainen strategiapeli. Tarkoituksena on u
 
 - Pelaajan on tarkoitus pelata tietokonetta vastaan.
 - Pelissä on visuaalinen käyttöliittymä.
+- Pelaaja valitsee siirtonsa hiirellä.
+- Pelin alussa laivat sijoitetaan paikoilleen hiirellä.
 - Peli ei ole aivan liian helppo.
 
 Mahdollisia muita toiminnallisuuksia:
