@@ -18,14 +18,16 @@ public class Human extends Player {
 
     public Human() {
         this.scanner = new Scanner(System.in);
+        this.score = 0;
     }
 
     @Override
     int nextMove(int[][] target) {
         for (int[] is : target) {
             for (int i : is) {
-                System.out.println("" + i);
+                System.out.print("" + i);
             }
+            System.out.println("");
         }
         System.out.println("choose your next move");
 
@@ -36,7 +38,7 @@ public class Human extends Player {
     @Override
     int[][] placeShips(int[][] map, ArrayList<Integer> ships) {
         //Ships might not follow rules yet
-        int location;
+       
         String direction;
         int x;
         int y;
@@ -44,39 +46,54 @@ public class Human extends Player {
 
             for (int[] is : map) {
                 for (int i : is) {
-                    System.out.println(""+i);
+                    System.out.print(""+i);
                 }
+                System.out.println("");
             }
             
             System.out.println("choose the location of your next ship");
             System.out.println("the length of the ship is " + ship);
-            
+            System.out.println("give the x-coordinate");
             //check that the input is suitable!!!!!!!!!!!!!
-            //location should be given as a pair of ints!!!!!!!!!!!!!!1
-            location = Integer.parseInt(scanner.nextLine());
+
+            x = Integer.parseInt(scanner.nextLine());
+            
+            System.out.println("give the y-cordinate");
+            
+            y = Integer.parseInt(scanner.nextLine());
             
             System.out.println("choose the direction of the ship");
-            System.out.println("type h or v");
+            
+            while (true) {
+            System.out.println("type h or v (for horizontal/vertical)");
             
             direction = scanner.nextLine();
-            //check that the input is suitable!!!!!!!!!!!!!
             
-            x = location / map[0].length;
-            y = location % map[0].length;
+            if (direction.equals("h")) break;
+            if (direction.equals("v")) break;
+            }
+            
             
             map[x][y] = 1;
             if (direction.equals("h")) {
                 for (int i = 0; i < ship; i++) {
-                    map[x + i + 1][y] = 1;
+                    map[x + i][y] = 1;
                 }
             } else {
                 for (int i = 0; i < ship; i++) {
-                    map[x][y+i+1]=1;
+                    map[x][y + i]=1;
                 }
             }
         }
         return map;
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    private void placeShip(int length) {
+        
+    }
+    
+    private boolean isPlacementLegal(int x, int y) {
+        return true;
+    }
 }
