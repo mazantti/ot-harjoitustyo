@@ -54,7 +54,7 @@ public class Human extends Player {
             System.out.println("choose the location of your next ship");
             System.out.println("the length of the ship is " + ship);
             System.out.println("give the x-coordinate");
-            //check that the input is suitable!!!!!!!!!!!!!
+            //checking that the input is suitable is not too relevant, since this is not the final method of choosing the next move
 
             x = Integer.parseInt(scanner.nextLine());
             

@@ -27,6 +27,6 @@ public abstract class Player {
         return this.name;
     }
     
-    abstract int nextMove(int[][] target);
+    abstract int nextMove(int[][] target); //change the return value to be int[]. Makes more sense.
     abstract int[][] placeShips(int[][] map, ArrayList<Integer> ships);
 }
