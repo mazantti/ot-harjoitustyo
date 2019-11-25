@@ -1,3 +1,5 @@
+package logic;
+
 
 import java.util.ArrayList;
 
@@ -76,14 +78,30 @@ public class Game {
         while (Math.max(player1.getScore(), player2.getScore()) != this.winScore) {
             this.playTurn(player1,target1,map2);
             this.playTurn(player2,target2,map1);
+            
+// testing...
+            for (int[] is : target1) {
+                for (int i : is) {
+                    System.out.print(i);
+                }
+                System.out.println("");
+            }
+            System.out.println("");
+            for (int[] is : target2) {
+                for (int i : is) {
+                    System.out.print(i);
+                }
+                System.out.println("");
+            }
+            System.out.println("");
         }
         
     }
     
     private void playTurn(Player player, int[][] target, int[][] enemy) {
-        int n = player.nextMove(target);
-        int x = n/target.length;  
-        int y = n%target.length;
+        int[] move = player.nextMove(target);
+        int x = move[0];  
+        int y = move[1];
         
         target[x][y] = 1; //1 means that the tile is hit
         

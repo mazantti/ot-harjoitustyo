@@ -1,3 +1,5 @@
+package logic;
+
 
 import java.util.ArrayList;
 
@@ -19,16 +21,24 @@ public class Machine extends Player {
 
     
     @Override
-    int nextMove(int[][] target) {
+    int[] nextMove(int[][] target) {
         //shoot stupidly at the next unshot tile
-        int move = 0;
+        int[] move = new int[2];
+        int x = 0;
+        int y = 0;
+        
         for (int[] is : target) {
             for (int i : is) {
-                move++;
-                if (i==0) return move;
+                
+                if (i==0) {
+                    move = new int[] {x,y};
+                    return move;
+                }
+                y++;
             }
+            x++;
         }
-        return 0;
+        return new int[] {0,0};
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

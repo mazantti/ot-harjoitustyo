@@ -1,3 +1,5 @@
+package logic;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -22,7 +24,7 @@ public class Human extends Player {
     }
 
     @Override
-    int nextMove(int[][] target) {
+    int[] nextMove(int[][] target) {
         for (int[] is : target) {
             for (int i : is) {
                 System.out.print("" + i);
@@ -30,8 +32,14 @@ public class Human extends Player {
             System.out.println("");
         }
         System.out.println("choose your next move");
+        System.out.println("give the x coordinate");
+        int[] move = new int[2];
+        move[0] = Integer.parseInt(scanner.nextLine());
+        
+        System.out.println("give the y coordinate");
+        move[1] = Integer.parseInt(scanner.nextLine());
 
-        return Integer.parseInt(scanner.nextLine());
+        return move;
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

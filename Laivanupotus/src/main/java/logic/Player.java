@@ -1,3 +1,5 @@
+package logic;
+
 
 import java.util.ArrayList;
 
@@ -27,6 +29,6 @@ public abstract class Player {
         return this.name;
     }
     
-    abstract int nextMove(int[][] target); //change the return value to be int[]. Makes more sense.
+    abstract int[] nextMove(int[][] target); //change the return value to be int[]. Makes more sense.
     abstract int[][] placeShips(int[][] map, ArrayList<Integer> ships);
 }
