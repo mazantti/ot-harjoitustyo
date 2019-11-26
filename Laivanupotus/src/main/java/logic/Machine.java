@@ -30,15 +30,16 @@ public class Machine extends Player {
         for (int[] is : target) {
             for (int i : is) {
                 
-                if (i==0) {
-                    move = new int[] {x,y};
+                if (i == 0) {
+                    move = new int[] {x, y};
+                    System.out.println("move returned" + x + " " + y);
                     return move;
                 }
-                y++;
+                y = (y + 1) % target.length;
             }
-            x++;
+            x = (x + 1) % target.length;
         }
-        return new int[] {0,0};
+        return new int[] {0, 0};
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

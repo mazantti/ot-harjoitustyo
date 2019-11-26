@@ -1,4 +1,7 @@
 # Laivanupotus
+
+Pelaa tietokonetta vastaan laivanupotusta.
+
 ## dokumentaatio
 
 

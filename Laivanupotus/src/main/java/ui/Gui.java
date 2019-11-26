@@ -31,50 +31,70 @@ public class Gui extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         ArrayList<Integer> ships = new ArrayList();
+        int size = 6;
         ships.add(3);
         
-        this.game = new Game(4,ships);
         
-        primaryStage.setTitle("GridPane Experiment");
+        this.game = new Game(size,ships);
+        
+        primaryStage.setTitle("Laivanupotus");
         HBox box = new HBox();
         box.setSpacing(20);
-        GridPane gridPane1 = new GridPane();
         
-        Tile[][] buttons1= new Tile[4][4];
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                buttons1[i][j] = new Tile(i,j);
+        GridPane gridPane1 = new GridPane(); //own ships
+        GridPane gridPane2 = new GridPane(); //enemy ships
+        
+        Tile[][] buttons1= new Tile[size][size];
+        Tile[][] buttons2= new Tile[size][size];
+        
+//        create the tiles
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                buttons1[i][j] = new Tile(i,j,1);
+                buttons2[i][j] = new Tile(i,j,2);
+                
+                
+                gridPane1.add(buttons1[i][j], i, j);
+                gridPane2.add(buttons2[i][j], i, j);
+//                buttons1[i][j].setStyle("-fx-background-color: blue; ");
+            }
+        }
+        
+        
+        
+//        set the actions for tiles
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
                 buttons1[i][j].setOnAction(new EventHandler<ActionEvent>() {
 
                     @Override
                     public void handle(ActionEvent event) {
                         Tile button = (Tile) event.getSource();
-                        System.out.println(button.getX()+" "+button.getY());
-                        
+//                        System.out.println(button.getX()+" "+button.getY());
+                        game.insertCommand(button.getX(), button.getY(), button.getSide());
+                        updateTiles(game.getMap1(),buttons1);
 
                     }
                 });
-                gridPane1.add(buttons1[i][j], i, j);
                 
-            }
-        }
-        
-        GridPane gridPane2 = new GridPane();
-        
-        Tile[][] buttons2= new Tile[4][4];
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                buttons2[i][j] = new Tile(i,j);
                 buttons2[i][j].setOnAction(new EventHandler<ActionEvent>() {
 
                     @Override
                     public void handle(ActionEvent event) {
                         
                         Tile tile = (Tile) event.getSource();
-                        System.out.println(tile.getX() + " " + tile.getY());
+                        int x = tile.getX();
+                        int y = tile.getY();
+                        int side = tile.getSide();
+//                        System.out.println(tile.getX() + " " + tile.getY());
+                        game.insertCommand(x,y,side);
+                        
+                        updateTiles(game.getTarget1(), buttons2);
+                        updateTiles(game.getMap1(),buttons1);
+                        
                     }
                 });
-                gridPane2.add(buttons2[i][j], i, j);
+                
                 
             }
         }
@@ -102,6 +122,8 @@ public class Gui extends Application {
         Scene scene = new Scene(box);
         primaryStage.setScene(scene);
         primaryStage.show();
+//        buttons1[0][0].fire();
+
     }
     
 //    @Override
@@ -126,6 +148,21 @@ public class Gui extends Application {
 //        primaryStage.show();
 //    }
 
+    
+    private void updateTiles(int[][] map, Tile[][] tiles) {
+        String[] colors = new String[4];
+        colors[0] = "blue";
+        colors[1] = "red";
+        colors[2] = "yellow";
+        colors[3] = "white";
+        
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map.length; j++) {
+                tiles[i][j].setStyle("-fx-background-color: " + colors[map[i][j]] + "; ");
+            }
+        }
+    }
+    
     
     
     /**

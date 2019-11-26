@@ -21,7 +21,7 @@ public class Laivanupotus {
         
         ArrayList<Integer> ships = new ArrayList();
         ships.add(3);
-        Game game = new Game(4,ships);
+        Game game = new Game(4, ships);
         game.runGame();
 
 //        int[][] taulu = new int[3][3];

@@ -14,10 +14,12 @@ import javafx.scene.control.Button;
 public class Tile extends Button {
     private int x;
     private int y;
-
-    public Tile(int x, int y) {
+    private int side;
+    
+    public Tile(int x, int y, int side) {
         this.x = x;
         this.y = y;
+        this.side = side;
     }
 
     public int getX() {
@@ -28,5 +30,8 @@ public class Tile extends Button {
         return y;
     }
     
+    public int getSide() {
+        return side;
+    }
     
 }
