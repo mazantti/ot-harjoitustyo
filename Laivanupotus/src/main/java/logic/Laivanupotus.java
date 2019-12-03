@@ -19,10 +19,10 @@ public class Laivanupotus {
         
         Gui.main(args);
         
-        ArrayList<Integer> ships = new ArrayList();
-        ships.add(3);
-        Game game = new Game(4, ships);
-        game.runGame();
+//        ArrayList<Integer> ships = new ArrayList();
+//        ships.add(3);
+//        Game game = new Game(4, ships);
+//        game.runGame();
 
 //        int[][] taulu = new int[3][3];
 //        int n = 0;

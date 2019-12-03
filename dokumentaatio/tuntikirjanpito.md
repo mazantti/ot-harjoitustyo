@@ -6,5 +6,7 @@
 - 25.11.2019 3h javaFX:n opettelua ja käyttöliittymän koodausta
 - 26.11.2019 4h javaFX:n opettelua ja käyttöliittymän koodausta
 - 26.11.2019 1h checkstyle:n käyttöönotto
+- 29.11.2019 1,5h toiminnallisuuksien lisäämistä
+- 2.12.2019 4,5h lisää koodia ja testausta
 
-yhteensä: 17h
+yhteensä: 23h

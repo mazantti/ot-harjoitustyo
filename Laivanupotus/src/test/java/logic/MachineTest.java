@@ -67,4 +67,14 @@ public class MachineTest {
         
         assertTrue(truth);
     }
+    
+    @Test
+    public void nextMoveIsWithinTheBounds() {
+        Machine m = new Machine();
+        int[][] map = new int[5][5];
+        
+        int[] move = m.nextMove(map);
+        assertTrue(move[0]<5 && move[1]<5);
+        
+    }
 }

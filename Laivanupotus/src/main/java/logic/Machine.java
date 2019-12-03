@@ -32,7 +32,7 @@ public class Machine extends Player {
                 
                 if (i == 0) {
                     move = new int[] {x, y};
-                    System.out.println("move returned" + x + " " + y);
+
                     return move;
                 }
                 y = (y + 1) % target.length;
@@ -46,11 +46,7 @@ public class Machine extends Player {
     @Override
     int[][] placeShips(int[][] map, ArrayList<Integer> ships) {
         
-        for (int[] is : map) {
-            for (int i : is) {
-                i = 0;
-            }
-        }
+
         for (int i = 0; i < ships.get(0); i++) {
             map[0][i] = 1;
         }
