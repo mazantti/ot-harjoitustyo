@@ -17,7 +17,7 @@ public class Game {
     private int[][] map2;
     private int[][] target1;
     private int[][] target2;
-    private Player player1;
+//    private Player player1;
     private Player player2;
     private ArrayList<Integer> ships;
     private int score1;
@@ -34,7 +34,7 @@ public class Game {
 
     public Game(int size, ArrayList<Integer> ships) {
         this.ships = ships;
-        this.player1 = new Human();
+//        this.player1 = new Human();
         this.player2 = new Machine();
         this.map1 = new int[size][size];
         this.map2 = new int[size][size];
