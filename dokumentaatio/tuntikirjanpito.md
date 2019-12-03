@@ -8,5 +8,8 @@
 - 26.11.2019 1h checkstyle:n käyttöönotto
 - 29.11.2019 1,5h toiminnallisuuksien lisäämistä
 - 2.12.2019 4,5h lisää koodia ja testausta
+- 3.12.2019 0,5h koodin siistimistä
+- 3.12.2019 3,0h dokumentointia ja jar-ongelmien ratkomista
 
-yhteensä: 23h
+
+yhteensä: 26,5h
