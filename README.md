@@ -4,10 +4,14 @@ Pelaa tietokonetta vastaan laivanupotusta.
 
 ## komentorivitoiminnot
 
-- testit:   mvn test
-- testikattavuusraportti:   mvn jacoco:report
-- suoritettavan jar:in generointi:   mvn package
-- checkstyle:   mvn jxr:jxr checkstyle:checkstyle
+- testit:   
+mvn test
+- testikattavuusraportti:   
+mvn jacoco:report
+- suoritettavan jar:in generointi:   
+mvn package
+- checkstyle:   
+mvn jxr:jxr checkstyle:checkstyle
 
 ## dokumentaatio
 
