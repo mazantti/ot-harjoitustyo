@@ -10,6 +10,8 @@
 - 2.12.2019 4,5h lisää koodia ja testausta
 - 3.12.2019 0,5h koodin siistimistä
 - 3.12.2019 3,0h dokumentointia ja jar-ongelmien ratkomista
+- 9.21.2019 5,0h "vastustajan" koodausta
+- 10.12.2019 7,0h "vastustajan" koodausta
 
 
 yhteensä: 26,5h

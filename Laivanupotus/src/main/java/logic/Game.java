@@ -31,11 +31,13 @@ public class Game {
 
 //    private int currentShip;
     private int[] currentShipPlace;
+    private boolean hit;
+    private boolean sunk;
 
     public Game(int size, ArrayList<Integer> ships) {
         this.ships = ships;
 //        this.player1 = new Human();
-        this.player2 = new Machine();
+        this.player2 = new Machine(size, ships);
         this.map1 = new int[size][size];
         this.map2 = new int[size][size];
         this.target1 = new int[size][size];
@@ -136,6 +138,7 @@ public class Game {
 
             if (this.currentShip < this.ships.size()) {
                 int bow[] = new int[]{x, y};
+                
                 boolean isLegal = this.ruleChecker.isPlacementLegal(bow, this.ships.get(this.currentShip), map1);
                 
                 if (isLegal) { //doesn't allow ships of the length 2
@@ -162,13 +165,24 @@ public class Game {
 
             }
 
-            int[] move2 = player2.nextMove(target2);
+            int[] move2 = player2.nextMove(target2, hit, sunk);
             target2[move2[0]][move2[1]] = 1;
 
             if (map1[move2[0]][move2[1]] == 1) {
                 map1[move2[0]][move2[1]] = 2;
+                hit = true;
+                
+                int[][] wasteMap = new int[map1.length][map1.length];
+                for (int i = 0; i < map1.length; i++) {
+                    for (int j = 0; j < map1.length; j++) {
+                        wasteMap[i][j] = map1[i][j];
+                    }
+                }
+                sunk = this.ruleChecker.isShipSunk(move2[0], move2[1], wasteMap);
                 target2[move2[0]][move2[1]] = 2;
                 
+            } else {
+                hit = false;
             }
         }
     }

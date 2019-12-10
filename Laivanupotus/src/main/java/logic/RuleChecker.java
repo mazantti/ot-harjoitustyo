@@ -43,6 +43,22 @@ public class RuleChecker {
 
         int lengthX = Math.abs(bow[0] - rear[0]);
         int lengthY = Math.abs(bow[1] - rear[1]);
+        
+        if (rear[0] < 0 || rear[0] >= map.length) {
+            return false;
+        }
+        
+        if (rear[1] < 0 || rear[1] >= map.length) {
+            return false;
+        }
+        
+        if (bow[0] < 0 || bow[0] >= map.length) {
+            return false;
+        }
+        
+        if (bow[1] < 0 || bow[1] >= map.length) {
+            return false;
+        }
 
         for (int i = x - 1; i <= x + lengthX + 1; i++) {
             for (int j = y - 1; j <= y + lengthY + 1; j++) {

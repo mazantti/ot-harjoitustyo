@@ -48,10 +48,11 @@ public class MachineTest {
     
     @Test
     public void placeShipsReturnsATableOfOnesAndZeros() {
-        Machine m = new Machine();
+        
         int[][] map = new int[5][5];
         ArrayList<Integer> ships = new ArrayList();
         ships.add(1);
+        Machine m = new Machine(5, ships);
         int[][] map2 = m.placeShips(map, ships);
         
         boolean truth = true;
@@ -70,10 +71,12 @@ public class MachineTest {
     
     @Test
     public void nextMoveIsWithinTheBounds() {
-        Machine m = new Machine();
-        int[][] map = new int[5][5];
         
-        int[] move = m.nextMove(map);
+        int[][] map = new int[5][5];
+        ArrayList<Integer> ships = new ArrayList();
+        ships.add(1);
+        Machine m = new Machine(5, ships);
+        int[] move = m.nextMove(map, false, false);
         assertTrue(move[0]<5 && move[1]<5);
         
     }
