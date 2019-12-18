@@ -16,7 +16,7 @@ public class Game {
     private int[][] map1;
     private int[][] map2;
     private int[][] target1;
-    private Player player2;
+    private Machine machine;
     private ArrayList<Integer> ships;
     private int score1;
     private int score2;
@@ -25,7 +25,7 @@ public class Game {
     private RuleChecker ruleChecker;
     
     private int expectedSide, currentShip;
-    private boolean setupPlayer2;
+    private boolean setupMachine;
 
 //    private int currentShip;
     private int[] currentShipPlace;
@@ -35,8 +35,7 @@ public class Game {
     
     public Game(int size, ArrayList<Integer> ships) {
         this.ships = ships;
-//        this.player1 = new Human();
-        this.player2 = new Machine(size, ships);
+        this.machine = new Machine(size, ships);
         this.map1 = new int[size][size];
         this.map2 = new int[size][size];
         this.target1 = new int[size][size];
@@ -44,7 +43,7 @@ public class Game {
         this.ruleChecker = new RuleChecker();
         
         this.expectedSide = 1;
-        this.setupPlayer2 = true;
+        this.setupMachine = true;
         
         this.currentShip = 0;
         this.currentShipPlace = new int[]{-1, -1};
@@ -106,9 +105,9 @@ public class Game {
             this.expectedSide = 2;
         }
         
-        if (this.setupPlayer2) {
-            map2 = player2.placeShips(map2, ships);
-            setupPlayer2 = false;
+        if (this.setupMachine) {
+            map2 = machine.placeShips(map2, ships);
+            setupMachine = false;
             
         }
     }
@@ -135,7 +134,7 @@ public class Game {
                 tip = "Ohi.";
             }
             
-            int[] move2 = player2.nextMove(hit, sunk);
+            int[] move2 = machine.nextMove(hit, sunk);
             
             if (map1[move2[0]][move2[1]] == 1) {
                 map1[move2[0]][move2[1]] = 2;
