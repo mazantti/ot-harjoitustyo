@@ -35,6 +35,6 @@ Luettavuuden vuoksi kaavio on hieman yksinkertaistettu. Siinä ei esimerkiksi n�
 ## Pelin jatkuminen (laivojen upottaminen)
 Seuraavassa vaiheessa pelaaja ja tietokone kumpikin pyrkivät upottamaan toistensa laivat. Käytännössä pelaaja valitsee seuraavan siirtonsa klikkaamalla oikeanpuoleista lautaa. Toteutuksen tasolla käyttöliittymä *Gui* antaa siirron luokalle *Game* tämän metodin *insertCommand* avulla. Tämän jälkeen *Game* kysyy machinen seuraavan siirron. Machine ulkoistaa siirron päättämisen luokalle *MoveSelector*. *MoveSelector* valitsee siirron luokan *RuleChecker* toimintoja ja todennäköisyyslaskentaa hyödyntämällä. Tämän jälkeen *Gui* kysyy luokalta *Game* uuden tilanteen ja päivittää sen pelaajan nähtäväksi. Tämä jatkuu kunnes jommankumman kaikki laivat ovat upotettuja, jolloin peli ilmoittaa voittajan. 
 
-![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/nextMove.png)
+![yksinkertaistettu kuvaus](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/nextMove.png)
 
 
