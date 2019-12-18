@@ -5,7 +5,8 @@ Ohjelma koostuu seuraavista kahdesta osasta: Käyttöliittymä (Gui) ja logiikka
 ### Käyttöliittymä
 Ohjelmassa on yksinkertainen graafinen käyttöliittymä. Käyttöliittymässä on yksi näkymä. Käyttöliittymä löytyy kansiosta *ui* ja koostuu kahdesta luokasta *ui.Gui* ja *ui.Tile*. Näistä ensimmäinen on ohjelman toiminnallissuuden kannalta merkittävämpi.
 
-Käyttöliittymä koostuu kolmesta osasta. Ylälaidassa on ohje siitä, mitä peli odottaa pelaajan seuraavaksi tekevän. Lisäksi näkymässä on kaksi lautaa, niin kuin laivanupotuksessa yleensäkin. Vasemmanpuoleinen näyttää pelaajan omien laivojen sijainnin. Oikealta pelaaja voi taas nähdä mihin hän on ampunut. Seuraava siirto valitaan klikkaamalla asiaankuuluvaa lautaa.
+Käyttöliittymän näkymä koostuu kolmesta osasta. Ylälaidassa on ohje siitä, mitä peli odottaa pelaajan seuraavaksi tekevän. Lisäksi näkymässä on kaksi lautaa, niin kuin laivanupotuksessa yleensäkin. Vasemmanpuoleinen näyttää pelaajan omien laivojen sijainnin. Oikealta pelaaja voi taas nähdä mihin hän on ampunut. Seuraava siirto valitaan klikkaamalla asiaankuuluvaa lautaa.
+![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliityma.png)
 
 ### Logiikka 
 Sovelluslogiikka löytyy kansiosta *logic*. Alla ohjelman toiminnan kannalta merkittävimmät luokat:
@@ -19,7 +20,7 @@ Sovelluslogiikka löytyy kansiosta *logic*. Alla ohjelman toiminnan kannalta mer
 
 
 ### Yksinkertaistettu luokkarakenne
-![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/luokkakaavio.png)
+![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/luokkakaavio3.png)
 
 ## Ohjelman käynnistys ja pelin aloittaminen
 Ohjelman toteutuksessa on kolme eri vaihetta. Alustaminen, laivojen sijoittaminen ja itse pelin pelaaminen. Käyttäjälle näistä vaiheista näkyvät kaksi jälkimmäistä. Tässä kohdassa selitetään kaksi ensimmäistä vaihetta. 
@@ -34,6 +35,6 @@ Luettavuuden vuoksi kaavio on hieman yksinkertaistettu. Siinä ei esimerkiksi n�
 ## Pelin jatkuminen (laivojen upottaminen)
 Seuraavassa vaiheessa pelaaja ja tietokone kumpikin pyrkivät upottamaan toistensa laivat. Käytännössä pelaaja valitsee seuraavan siirtonsa klikkaamalla oikeanpuoleista lautaa. Toteutuksen tasolla käyttöliittymä *Gui* antaa siirron luokalle *Game* tämän metodin *insertCommand* avulla. Tämän jälkeen *Game* kysyy machinen seuraavan siirron. Machine ulkoistaa siirron päättämisen luokalle *MoveSelector*. *MoveSelector* valitsee siirron luokan *RuleChecker* toimintoja ja todennäköisyyslaskentaa hyödyntämällä. Tämän jälkeen *Gui* kysyy luokalta *Game* uuden tilanteen ja päivittää sen pelaajan nähtäväksi. Tämä jatkuu kunnes jommankumman kaikki laivat ovat upotettuja, jolloin peli ilmoittaa voittajan. 
 
-
+![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/nextMove.png)
 
 
