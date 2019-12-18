@@ -10,10 +10,10 @@ Käyttöliittymä koostuu kolmesta osasta. Ylälaidassa on ohje siitä, mitä pe
 ### Logiikka 
 Sovelluslogiikka löytyy kansiosta *logic*. Alla ohjelman toiminnan kannalta merkittävimmät luokat:
 
-- *logic.Game*
-- *logic.RuleChecker*
-- *logic.Machine*
-- *logic.MoveSelector*
+- *logic.Game* hallitsee pelitilannetta
+- *logic.RuleChecker* sisältää metodeja eri asioiden sääntöjenmukaisuuden tarkastamiseen
+- *logic.Machine* "vastustaja"
+- *logic.MoveSelector* valitsee Machinen seuraavan siirron
 
 
 
