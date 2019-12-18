@@ -30,7 +30,7 @@ public class Machine extends Player {
     }
 
     @Override
-    int[] nextMove(int[][] target, boolean hit, boolean sunk) {
+    int[] nextMove(boolean hit, boolean sunk) {
         return this.moveSelector.nextMove(hit, sunk);
     }
 
@@ -42,13 +42,12 @@ public class Machine extends Player {
         }
 
         return map;
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private int[][] placeShip(int[][] map, int length) {
         int x, y;
         int[] bow;
-
+        
         while (true) {
             x = random.nextInt(map.length);
             y = random.nextInt(map.length);
@@ -58,21 +57,15 @@ public class Machine extends Player {
                 break;
             }
         }
-
+        
         while (true) {
             int dir = random.nextInt(4);
             
-//            System.out.print(dir + "  ");
-//            
             int[] rear = new int[]{(dir % 2) * (dir - 2), ((dir + 1) % 2) * (dir - 1)};
-            
-//            System.out.print(rear[0] + "," + rear[1] + "  ");
-//            
+                        
             rear[0] = bow[0] + length * rear[0];
             rear[1] = bow[1] + length * rear[1];
-//            
-//            System.out.print(bow[0] + "," + bow[1] + "  ");
-//            System.out.println(rear[0] + "," + rear[1]);
+
 
             if (this.ruleChecker.isDirectionLegal(bow, rear, map)) {
                 return this.placeShip(map, bow, rear, length);

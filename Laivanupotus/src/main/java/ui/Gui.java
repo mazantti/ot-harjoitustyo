@@ -49,7 +49,7 @@ public class Gui extends Application {
         box.setSpacing(20);
         
         Text text = new Text();
-        text.setText("0");
+        text.setText(this.game.getTip());
         
         GridPane gridPane1 = new GridPane(); //own ships
         GridPane gridPane2 = new GridPane(); //enemy ships
@@ -63,6 +63,8 @@ public class Gui extends Application {
                 buttons1[i][j] = new Tile(i,j,1);
                 buttons2[i][j] = new Tile(i,j,2);
                 
+                buttons1[i][j].setStyle("-fx-background-color: blue; ");
+                buttons2[i][j].setStyle("-fx-background-color: blue; ");
                 
                 gridPane1.add(buttons1[i][j], i, j);
                 gridPane2.add(buttons2[i][j], i, j);

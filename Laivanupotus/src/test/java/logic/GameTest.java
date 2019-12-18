@@ -43,7 +43,7 @@ public class GameTest {
     public void placeShipPlacesAShip() {
         ArrayList<Integer> ships= new ArrayList();
         ships.add(3);
-        Game game = new Game(4,ships);
+        Game game = new Game(10,ships);
         
         game.insertCommand(0, 0, 1);
         game.insertCommand(0, 2, 1);
@@ -51,12 +51,9 @@ public class GameTest {
         int[][] map = game.getMap1();
         
         boolean test = map[0][0] == 1;
-//        System.out.println(test);
         test = test && map[0][1] == 1;
-//        System.out.println(test);
         test = test && map[0][2] == 1;
-//        System.out.println(test);
-        
+       
         assertTrue(test);
     }
     
@@ -64,7 +61,7 @@ public class GameTest {
     public void placeShipDoesNotPlaceTooLongShips() {
         ArrayList<Integer> ships= new ArrayList();
         ships.add(3);
-        Game game = new Game(4,ships);
+        Game game = new Game(10,ships);
         
         game.insertCommand(0, 0, 1);
         game.insertCommand(0, 3, 1);
@@ -76,7 +73,7 @@ public class GameTest {
     public void placeShipDoesntPlaceShipsThatArentStaight() {
         ArrayList<Integer> ships= new ArrayList();
         ships.add(3);
-        Game game = new Game(4,ships);
+        Game game = new Game(10,ships);
         
         game.insertCommand(0, 0, 1);
         game.insertCommand(1, 2, 1);
@@ -87,7 +84,6 @@ public class GameTest {
         for (int[] is : map) {
             for (int i : is) {
                 test = test || i == 1;
-                System.out.println(test);
             }
         }
         

@@ -72,11 +72,10 @@ public class MachineTest {
     @Test
     public void nextMoveIsWithinTheBounds() {
         
-        int[][] map = new int[5][5];
         ArrayList<Integer> ships = new ArrayList();
         ships.add(1);
         Machine m = new Machine(5, ships);
-        int[] move = m.nextMove(map, false, false);
+        int[] move = m.nextMove(false, false);
         assertTrue(move[0]<5 && move[1]<5);
         
     }

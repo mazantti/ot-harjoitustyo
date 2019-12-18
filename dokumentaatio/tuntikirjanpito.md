@@ -12,6 +12,9 @@
 - 3.12.2019 3,0h dokumentointia ja jar-ongelmien ratkomista
 - 9.21.2019 5,0h "vastustajan" koodausta
 - 10.12.2019 7,0h "vastustajan" koodausta
+- 12.12.1019 1,5h bugien poistoa
+- 13.12.2019 4,0h hienosäätöä
+- 16.12.2019 3,0h debuggausta ja testausta
 
 
-yhteensä: 26,5h
+yhteensä: 35,0h
