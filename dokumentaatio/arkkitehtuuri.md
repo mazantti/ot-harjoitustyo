@@ -8,8 +8,13 @@ Ohjelmassa on yksinkertainen graafinen käyttöliittymä. Käyttöliittymässä 
 Käyttöliittymä koostuu kolmesta osasta. Ylälaidassa on ohje siitä, mitä peli odottaa pelaajan seuraavaksi tekevän. Lisäksi näkymässä on kaksi lautaa, niin kuin laivanupotuksessa yleensäkin. Vasemmanpuoleinen näyttää pelaajan omien laivojen sijainnin. Oikealta pelaaja voi taas nähdä mihin hän on ampunut. Seuraava siirto valitaan klikkaamalla asiaankuuluvaa lautaa.
 
 ### Logiikka 
-Ohjelmalogiikka löytyy kansiosta *logic*. Alla ohjelman toiminnan kannalta merkittävimmät luokat:
-- 
+Sovelluslogiikka löytyy kansiosta *logic*. Alla ohjelman toiminnan kannalta merkittävimmät luokat:
+
+- *logic.Game*
+- *logic.RuleChecker*
+- *logic.Machine*
+- *logic.MoveSelector*
+
 
 
 ### Yksinkertaistettu luokkarakenne
