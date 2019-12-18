@@ -14,6 +14,7 @@ Sovelluslogiikka löytyy kansiosta *logic*. Alla ohjelman toiminnan kannalta mer
 - *logic.RuleChecker* sisältää metodeja eri asioiden sääntöjenmukaisuuden tarkastamiseen
 - *logic.Machine* "vastustaja"
 - *logic.MoveSelector* valitsee Machinen seuraavan siirron
+- *logic.ShipPlacer* valitsee Machinen laivojen sijainnin
 
 
 
