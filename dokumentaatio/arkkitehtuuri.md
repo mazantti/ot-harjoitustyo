@@ -11,7 +11,7 @@ Ohjelma koostuu seuraavista kahdesta osasta: Käyttöliittymä (Gui) ja logiikka
 Ohjelmassa on yksinkertainen graafinen käyttöliittymä. Käyttöliittymässä on yksi näkymä. Käyttöliittymä löytyy kansiosta *ui* ja koostuu kahdesta luokasta *ui.Gui* ja *ui.Tile*. Näistä ensimmäinen on ohjelman toiminnallissuuden kannalta merkittävämpi.
 
 Käyttöliittymän näkymä koostuu kolmesta osasta. Ylälaidassa on ohje siitä, mitä peli odottaa pelaajan seuraavaksi tekevän. Lisäksi näkymässä on kaksi lautaa, niin kuin laivanupotuksessa yleensäkin. Vasemmanpuoleinen näyttää pelaajan omien laivojen sijainnin. Oikealta pelaaja voi taas nähdä mihin hän on ampunut. Seuraava siirto valitaan klikkaamalla asiaankuuluvaa lautaa.
-![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliityma.png)
+![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliittyma.png)
 
 ### Logiikka 
 Sovelluslogiikka löytyy kansiosta *logic*. Alla ohjelman toiminnan kannalta merkittävimmät luokat:
