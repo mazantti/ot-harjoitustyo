@@ -15,7 +15,7 @@ public class Game {
     
     private int[][] map1;
     private int[][] map2;
-    private int[][] target1;
+    private int[][] target;
     private Machine machine;
     private ArrayList<Integer> ships;
     private int score1;
@@ -38,7 +38,7 @@ public class Game {
         this.machine = new Machine(size, ships);
         this.map1 = new int[size][size];
         this.map2 = new int[size][size];
-        this.target1 = new int[size][size];
+        this.target = new int[size][size];
         
         this.ruleChecker = new RuleChecker();
         
@@ -113,11 +113,11 @@ public class Game {
     }
     
     private void shootingTurn(int x, int y) {
-                    target1[x][y] = 1;
+                    target[x][y] = 1;
             
             if (map2[x][y] == 1) {
                 map2[x][y] = 2;
-                target1[x][y] = 2;
+                target[x][y] = 2;
                 tip = "Osui.";
                 score1++;
                 int[][] wasteMap = new int[map2.length][map2.length];
@@ -200,8 +200,8 @@ public class Game {
         return map1;
     }
     
-    public int[][] getTarget1() {
-        return target1;
+    public int[][] getTarget() {
+        return target;
     }
     
     public String getTip() {

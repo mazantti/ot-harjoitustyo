@@ -102,7 +102,7 @@ public class Gui extends Application {
 //                        System.out.println(tile.getX() + " " + tile.getY());
                         game.insertCommand(x,y,side);
                         
-                        updateTiles(game.getTarget1(), buttons2);
+                        updateTiles(game.getTarget(), buttons2);
                         updateTiles(game.getMap1(),buttons1);
                         updateTip(text);
                         
