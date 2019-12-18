@@ -8,6 +8,9 @@ Ohjelma koostuu seuraavista kahdesta osasta: Käyttöliittymä (Gui) ja logiikka
 ![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/luokkakaavio.png)
 
 ## Ohjelman käynnistys ja pelin aloittaminen
+Ohjelman toteutuksessa on kolme eri vaihetta. Alustaminen, laivojen sijoittaminen ja itse pelin pelaaminen. Käyttäjälle näistä vaiheista näkyvät kaksi jälkimmäistä. Tässä kohdassa selitetään kaksi ensimmäistä vaihetta. 
+
+
 
 
 ### sekvenssikaavio pelin alkuvaiheesta pelin aloituksesta ensimmäisen laivan sijoittamseen
