@@ -7,5 +7,8 @@ Ohjelma koostuu seuraavista kahdesta osasta: Käyttöliittymä (Gui) ja logiikka
 ### Yksinkertaistettu luokkarakenne
 ![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/luokkakaavio.png)
 
+## Ohjelman käynnistys ja pelin aloittaminen
+
+
 ### sekvenssikaavio pelin alkuvaiheesta pelin aloituksesta ensimmäisen laivan sijoittamseen
 ![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/alkusekvenssi.png)
