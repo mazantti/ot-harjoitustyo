@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- *
+ * Places ships for the class Machine
+ * 
  * @author mazantti
  */
 public class ShipPlacer {

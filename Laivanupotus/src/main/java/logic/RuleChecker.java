@@ -6,7 +6,8 @@
 package logic;
 
 /**
- *
+ * Methods for checking that the game goes according to the rules
+ * 
  * @author mazantti
  */
 public class RuleChecker {
@@ -16,6 +17,7 @@ public class RuleChecker {
 
     /**
      * checks if the suggested placement for the ship is legal
+     *
      * @param bow
      * @param length
      * @param map
@@ -43,13 +45,14 @@ public class RuleChecker {
 
         return legality;
     }
-    
+
     /**
      * checks if the suggested direction for the ship is legal
+     *
      * @param bow
      * @param rear
      * @param map
-     * @return 
+     * @return
      */
     public boolean isDirectionLegal(int[] bow, int[] rear, int[][] map) {
         int x = Math.min(bow[0], rear[0]);
@@ -57,23 +60,31 @@ public class RuleChecker {
 
         int lengthX = Math.abs(bow[0] - rear[0]);
         int lengthY = Math.abs(bow[1] - rear[1]);
-        
+
         if (rear[0] < 0 || rear[0] >= map.length) {
             return false;
         }
-        
+
         if (rear[1] < 0 || rear[1] >= map.length) {
             return false;
         }
-        
+
         if (bow[0] < 0 || bow[0] >= map.length) {
             return false;
         }
-        
+
         if (bow[1] < 0 || bow[1] >= map.length) {
             return false;
         }
 
+        if (this.checkForOtherShips(x, y, lengthX, lengthY, map)) {
+            return false;
+        }
+
+        return this.areTilesFree(bow, rear, map);
+    }
+
+    private boolean checkForOtherShips(int x, int y, int lengthX, int lengthY, int[][] map) {
         for (int i = x - 1; i <= x + lengthX + 1; i++) {
             for (int j = y - 1; j <= y + lengthY + 1; j++) {
                 if (i < 0 || i >= map.length) {
@@ -85,25 +96,22 @@ public class RuleChecker {
                 }
 
                 if (map[i][j] == 1) {
-//                    System.out.println("returned false");
-                    return false;
-                    
+                    return true;
+
                 }
-                
-                
+
             }
         }
-//        System.out.println("returned true");
-        return this.areTilesFree(bow, rear, map);
+        return false;
     }
-    
+
     private boolean areTilesFree(int[] bow, int[] rear, int[][] map) {
         int x = Math.min(bow[0], rear[0]);
         int y = Math.min(bow[1], rear[1]);
-        
+
         int lengthX = Math.abs(bow[0] - rear[0]);
         int lengthY = Math.abs(bow[1] - rear[1]);
-        
+
         for (int i = x; i <= x + lengthX; i++) {
             for (int j = y; j <= y + lengthY; j++) {
                 if (map[i][j] == 2) {
@@ -111,16 +119,17 @@ public class RuleChecker {
                 }
             }
         }
-        
+
         return true;
     }
 
     /**
      * checks whether the ship is sunk
+     *
      * @param x
      * @param y
      * @param map
-     * @return 
+     * @return
      */
     public boolean isShipSunk(int x, int y, int[][] map) {
         int[][] map2 = new int[map.length][map.length];
@@ -131,17 +140,17 @@ public class RuleChecker {
         }
         return isShipSunk2(x, y, map2);
     }
-    
+
     private boolean isShipSunk2(int x, int y, int[][] map) {
-        
+
         if (x < 0 || x >= map.length) {
             return true;
         }
-        
+
         if (y < 0 || y >= map.length) {
             return true;
         }
-        
+
         if (map[x][y] == 1) {
             return false;
         }
@@ -149,15 +158,13 @@ public class RuleChecker {
         if (map[x][y] == 0) {
             return true;
         }
-        
+
         if (map[x][y] == -1) {
             return true;
-        } 
-        
+        }
+
         map[x][y] = -1;
         return isShipSunk2(x + 1, y, map) && isShipSunk2(x, y + 1, map) && isShipSunk2(x - 1, y, map) && isShipSunk2(x, y - 1, map);
     }
-    
-    
 
 }

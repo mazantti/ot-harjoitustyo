@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- *
+ *Selects the moves for the class Machine
+ * 
  * @author mazantti
  */
 public class MoveSelector {

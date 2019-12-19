@@ -2,12 +2,8 @@ package logic;
 
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
+ * Keeps the situation of the game in memory and monitors its progression
  *
  * @author mazantti
  */
@@ -27,7 +23,6 @@ public class Game {
     private int expectedSide, currentShip;
     private boolean setupMachine;
 
-//    private int currentShip;
     private int[] currentShipPlace;
     private boolean hit;
     private boolean sunk;
@@ -113,7 +108,9 @@ public class Game {
     }
 
     private void shootingTurn(int x, int y) {
-        target[x][y] = 1;
+        if (target[x][y] != 2) {
+            target[x][y] = 1;
+        }
 
         if (map2[x][y] == 1) {
             map2[x][y] = 2;
@@ -210,12 +207,12 @@ public class Game {
 
     private void isGameOver() {
         if (score1 >= this.winScore) {
-            tip = "Voitit pelin.";
+            tip = "VOITIT PELIN.";
             score2 = 0;
         }
 
         if (score2 >= this.winScore) {
-            tip = "Hävisit pelin";
+            tip = "HÄVISIT PELIN";
             score1 = 0;
         }
     }
