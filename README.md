@@ -2,6 +2,9 @@
 
 Pelaa tietokonetta vastaan laivanupotusta.
 
+## release
+[Laivanupotus](https://github.com/mazantti/ot-harjoitustyo/releases/tag/Lopullinen)
+
 ## komentorivitoiminnot
 
 - testit:   
@@ -12,9 +15,11 @@ mvn jacoco:report
 mvn package
 - checkstyle:   
 mvn jxr:jxr checkstyle:checkstyle
+- javaDoc:
+mvn javadoc:javadoc
 
 ## dokumentaatio
-
+[käyttöohje](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 [vaatimusmäärittely](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
@@ -24,4 +29,4 @@ mvn jxr:jxr checkstyle:checkstyle
 
 [testausdokumentti](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/Testausdokumentti.md)
 
-[todennäköisyyslaskentaa](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/todennakoisyyslaskenta.md) Selvennys siitä, miten tietokone valitsee siirtonsa.
+[todennäköisyyslaskentaa](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/todennakoisyyslaskenta.md) (Selvennys siitä, miten tietokone valitsee siirtonsa.)
