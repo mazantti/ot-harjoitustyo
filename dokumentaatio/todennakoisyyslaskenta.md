@@ -24,5 +24,5 @@ Taulu *chances* päivitetään seuraavasti. jokaiselle ruudulle annetaan numeroa
 Seuraava siirto arvotaan taulun *chances* sisältämän jakauman perusteella.
 
 **Huomioita todennäköisyysjakaumasta**
-Kaytetty jakauma ei vastaa todellisuutta, siinä, että se ei anna oikeaa todennäköisyyttä sille, että ruudussa on laiva. Tarkan arvon laskeminen olisi aivan liian vaativaa ajallisesti, joten toteutuksessa on tyydytty yksinkertaisempaan jakaumaan.
+Käytetty jakauma ei vastaa todellisuutta, siinä, että se ei anna oikeaa todennäköisyyttä sille, että ruudussa on laiva. Tarkan arvon laskeminen olisi aivan liian vaativaa ajallisesti, joten toteutuksessa on tyydytty yksinkertaisempaan jakaumaan.
 
