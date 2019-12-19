@@ -2,6 +2,9 @@
 
 Pelaa tietokonetta vastaan laivanupotusta.
 
+## release
+[Laivanupotus](https://github.com/mazantti/ot-harjoitustyo/releases/tag/Lopullinen)
+
 ## komentorivitoiminnot
 
 - testit:   
