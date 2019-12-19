@@ -6,6 +6,7 @@ Yksikkö ja integraatiotestit on toteutettu luokissa GameTest, MachineTest, Move
 
 
 ## Testikattavuus
+Rivikattavuus on 95% ja haarautumakattavuus on 90%.
 ![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/testikattavuusraportti.png)
 ## Järjestelmätestaus
 Järjestelmätestaus on suoritettu manuaalisesti.
