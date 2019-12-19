@@ -1,4 +1,4 @@
-### Sovelluksessa käytetty todennäköisyyslaskenta
+# Sovelluksessa käytetty todennäköisyyslaskenta
 "Vastustaja", jota vastaan pelaaja pelaa käyttää hyödykseen yksinkertaista todennäköisyyslaskentaa siirtojensa valitsemiseen. Tässä dokumentissa selitetään luokkien *ShipPlacer* ja *MoveSelector* toiminta menemättä kovin tarkasti toteutuksen yksityiskohtiin.
 
 ## ShipPlacer
