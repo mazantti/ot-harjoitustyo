@@ -21,3 +21,6 @@ mvn jxr:jxr checkstyle:checkstyle
 [tuntikirjanpito](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 [arkkitehtuuri](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+[testausdokumentti](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/Testausdokumentti.md)
+
