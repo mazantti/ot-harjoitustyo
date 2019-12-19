@@ -19,7 +19,7 @@ mvn jxr:jxr checkstyle:checkstyle
 mvn javadoc:javadoc
 
 ## dokumentaatio
-
+[käyttöohje](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 [vaatimusmäärittely](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
