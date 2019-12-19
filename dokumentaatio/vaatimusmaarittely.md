@@ -11,10 +11,11 @@ Laivanupotus on kahden pelaajan vuoropohjainen strategiapeli. Tarkoituksena on u
 - Peli ei ole aivan liian helppo. (ei vielä toteutettu)
 
 ## käyttöliittymä
+Käyttöliittymä näyttää suurinpiirtein tältä:
+![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/kayttoliitymapiirrustus.png)
 
 
-
-Mahdollisia muita toiminnallisuuksia:
+## Mahdollisia muita toiminnallisuuksia
 - useampia vaikeusasteita
 - useampia eri vaihtoehtoja laudan kooksi ja laivojen määräksi
 - kaksinpeli
