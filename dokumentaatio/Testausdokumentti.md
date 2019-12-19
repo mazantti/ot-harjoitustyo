@@ -5,7 +5,7 @@ Ohjelmaa on testattu sekä JUnit-testeillä automatisoidusti että manuaalisesti
 Yksikkö ja integraatiotestit on toteutettu luokissa GameTest, MachineTest, MoveselectorTest ja RuleCheckerTest. Merkittävimmät integraatiotestit ovat testiluokassa GameTest olevat testit machineShootsBackProperly() ja playerCanHitMachine(). 
 
 
-## Testauskattavuus
-
+## Testikattavuus
+![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/testikattavuusraportti.png)
 ## Järjestelmätestaus
 Järjestelmätestaus on suoritettu manuaalisesti.
