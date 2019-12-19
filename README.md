@@ -24,3 +24,4 @@ mvn jxr:jxr checkstyle:checkstyle
 
 [testausdokumentti](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/Testausdokumentti.md)
 
+[todennäköisyyslaskentaa](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/todennakoisyyslaskenta.md) Selvennys siitä, miten tietokone valitsee siirtonsa.

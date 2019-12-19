@@ -36,4 +36,4 @@ Seuraavassa vaiheessa pelaaja ja tietokone kumpikin pyrkivät upottamaan toisten
 ### yksinkertaistettu kuvaus vuoroparin tapahtumista
 ![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/nextMove.png)
 
-
+Jos lukijaa kiinnostaa miten tietokone valitsee siirtonsa, on asia selitetty tarkemmin [täällä](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/todennakoisyyslaskenta.md). 
