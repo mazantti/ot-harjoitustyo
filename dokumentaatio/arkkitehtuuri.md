@@ -27,6 +27,7 @@ Ohjelman toteutuksessa on kolme eri vaihetta. Alustaminen, laivojen sijoittamine
 
 ### sekvenssikaavio pelin alkuvaiheesta pelin aloituksesta ensimmäisen laivan sijoittamseen
 ![](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/alkusekvenssi.png)
+
 Luettavuuden vuoksi kaavio on hieman yksinkertaistettu. Siinä ei esimerkiksi näy, että machine ulkoistaa laivojen sijoittamisen luokalle ShipPlacer. 
 
 ## Pelin jatkuminen (laivojen upottaminen)
