@@ -58,6 +58,24 @@ public class GameTest {
     }
     
     @Test 
+    public void placeShipPlacesAShipInDifferentDirection() {
+        ArrayList<Integer> ships= new ArrayList();
+        ships.add(3);
+        Game game = new Game(10,ships);
+        
+        game.insertCommand(0, 0, 1);
+        game.insertCommand(2, 0, 1);
+        
+        int[][] map = game.getMap1();
+        
+        boolean test = map[0][0] == 1;
+        test = test && map[1][0] == 1;
+        test = test && map[2][0] == 1;
+       
+        assertTrue(test);
+    }
+    
+    @Test 
     public void placeShipDoesNotPlaceTooLongShips() {
         ArrayList<Integer> ships= new ArrayList();
         ships.add(3);
@@ -88,6 +106,66 @@ public class GameTest {
         }
         
         assertFalse(test);
+    }
+    
+    @Test
+    public void itIsPossibleToShootEnemyShips() {
+        ArrayList<Integer> ships= new ArrayList();
+        ships.add(3);
+        Game game = new Game(10,ships);
+        
+        game.insertCommand(0, 0, 1);
+        game.insertCommand(0, 2, 1);
+        
+        game.insertCommand(0, 0, 2);
+        
+        assertTrue(game.getTarget()[0][0] != 0);
+    }
+    
+    @Test
+    public void machineShootsBackProperly() {
+        ArrayList<Integer> ships= new ArrayList();
+        ships.add(3);
+        Game game = new Game(10,ships);
+        
+        game.insertCommand(0, 0, 1);
+        game.insertCommand(0, 2, 1);
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                game.insertCommand(i, j, 2);
+            }
+        }
+        int[][] map = game.getMap1();
+        boolean test = map[0][0] == 2;
+        test = test && map[0][1] == 2;
+        test = test && map[0][2] == 2;
+        
+        assertTrue(test);
+    }
+    
+    @Test
+    public void playerCanHitMachine() {
+        ArrayList<Integer> ships= new ArrayList();
+        ships.add(3);
+        Game game = new Game(10,ships);
+        
+        game.insertCommand(0, 0, 1);
+        game.insertCommand(0, 2, 1);
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                game.insertCommand(i, j, 2);
+            }
+        }
+        int[][] target = game.getTarget();
+        int sum = 0;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                sum += target[i][j];
+            }
+        }
+        assertTrue(sum == 103);
     }
 
     // TODO add test methods here.
