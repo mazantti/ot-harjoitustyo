@@ -15,6 +15,8 @@
 - 12.12.1019 1,5h bugien poistoa
 - 13.12.2019 4,0h hienosäätöä
 - 16.12.2019 3,0h debuggausta ja testausta
+- 18.12.2019 5,0h dokumentointia
+- 19.12.2019 7,0h dokumentointia, testausta ja hienosäätöä
 
 
-yhteensä: 35,0h
+yhteensä: 47,0h
