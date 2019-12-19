@@ -15,6 +15,8 @@ mvn jacoco:report
 mvn package
 - checkstyle:   
 mvn jxr:jxr checkstyle:checkstyle
+- javaDoc:
+mvn javadoc:javadoc
 
 ## dokumentaatio
 
