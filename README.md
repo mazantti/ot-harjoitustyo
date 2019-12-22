@@ -1,6 +1,6 @@
 # Laivanupotus
 
-Pelaa tietokonetta vastaan laivanupotusta.
+Sovellus on tietokoneversio klassisesta pelistä laivanupotus. Sovellus mahdollistaa pelaamisen tietokonetta vastaan. 
 
 ## release
 [Laivanupotus](https://github.com/mazantti/ot-harjoitustyo/releases/tag/Lopullinen)
