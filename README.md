@@ -7,16 +7,26 @@ Pelaa tietokonetta vastaan laivanupotusta.
 
 ## komentorivitoiminnot
 
-- testit:   
+- testit:
+```
 mvn test
-- testikattavuusraportti:   
+```
+- testikattavuusraportti (löytyy tiedostosta  *target/site/jacoco/index.html*):   
+```
 mvn jacoco:report
-- suoritettavan jar:in generointi:   
+```
+- suoritettavan jar:in generointi (ilmestyy hakemistoon *target*):
+```
 mvn package
-- checkstyle:   
+```
+- checkstyle (*target/site/checkstyle.html*):
+```
 mvn jxr:jxr checkstyle:checkstyle
-- javaDoc:
+```
+- javaDoc (target/site/apidocs/index.html):
+```
 mvn javadoc:javadoc
+```
 
 ## dokumentaatio
 [käyttöohje](https://github.com/mazantti/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
