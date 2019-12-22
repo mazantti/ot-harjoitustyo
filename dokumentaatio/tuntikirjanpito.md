@@ -17,6 +17,7 @@
 - 16.12.2019 3,0h debuggausta ja testausta
 - 18.12.2019 5,0h dokumentointia
 - 19.12.2019 7,0h dokumentointia, testausta ja hienosäätöä
+- 21.12.2019 0,25h dokumentointia
+- 22.12.2019 0,25h dokumentointia
 
-
-yhteensä: 47,0h
+yhteensä: 47,5h
